@@ -59,7 +59,13 @@ public class SecondActivity extends AppCompatActivity {
         binding.buttonMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent implicitInter = new Intent(Intent.ACTION_VIEW, Uri.parse("gingercea@gmail"));
+                String message=binding.editTextMensaje.getText().toString();
+                // crear metofo de envio de correo
+
+                Intent Intentemailintent = new Intent(Intent.ACTION_SEND);
+                Intentemailintent.setType("text/plain");
+
+                Intent implicitInter = new Intent(Intent.ACTION_DIAL, Uri.parse("gingercea@gmail"));
                 startActivity(implicitInter);
             }
 
