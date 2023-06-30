@@ -13,6 +13,7 @@ import com.example.sprintfinal.databinding.ActivitySecondBinding;
 
 public class SecondActivity extends AppCompatActivity {
     private ActivitySecondBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,30 +60,32 @@ public class SecondActivity extends AppCompatActivity {
         binding.buttonMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String message=binding.editTextMensaje.getText().toString();
-                // crear metofo de envio de correo
+                String message = binding.editTextMensaje.getText().toString();
+                // crear metodo de envio de correo
 
-                Intent Intentemailintent = new Intent(Intent.ACTION_SEND);
-                Intentemailintent.setType("text/plain");
+                composeEmail("gingercea@gmail.com","Contacto al mail",message);
 
-                Intent implicitInter = new Intent(Intent.ACTION_DIAL, Uri.parse("gingercea@gmail"));
-                startActivity(implicitInter);
-            }
 
-            // Creación de método con intent implícito para enviar correo electrónico.
-            public void composeEmail(String address, String subject) {
-                Intent implicitIntentEmail = new Intent(Intent.ACTION_SENDTO);
-                implicitIntentEmail.setData(Uri.parse("mailto:"));
-                implicitIntentEmail.putExtra(Intent.EXTRA_EMAIL, address);
-                implicitIntentEmail.putExtra(Intent.EXTRA_SUBJECT, subject);
-
-                if (implicitIntentEmail.resolveActivity(getPackageManager()) != null) {
-                    startActivity(implicitIntentEmail);
-                }
+               // Intent implicitInter = new Intent(Intent., Uri.parse("gingercea@gmail"));
 
             }
 
 
         });
 
-    }}
+    }
+
+    // Creación de método con intent implícito para enviar correo electrónico.
+    public void composeEmail(String address, String subject,String message) {
+        Intent implicitIntentEmail = new Intent(Intent.ACTION_SENDTO); // se utilizo send no me dio opcion me llevo a outlock y con sendTO me da las diferentes opciones para correo
+        implicitIntentEmail.setType("text/plain");
+        implicitIntentEmail.setData(Uri.parse("mailto:"));
+        implicitIntentEmail.putExtra(Intent.EXTRA_EMAIL, address);
+        implicitIntentEmail.putExtra(Intent.EXTRA_SUBJECT, subject);
+        implicitIntentEmail.putExtra(Intent.EXTRA_TEXT, message);
+        startActivity(Intent.createChooser(implicitIntentEmail, "Enviando..."));
+        finish();
+
+
+    }
+}
