@@ -13,8 +13,9 @@
         android:theme="@style/Theme.SprintFinal"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityPedro"
-            android:exported="false" />
+            android:name=".SecondActivity"
+            android:exported="false"
+           android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -11,11 +11,24 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src=""
         android:scaleType="centerCrop"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="176dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
+        android:src=""
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-173dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Soy Ginger Cea Ingeniera Comercial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:textSize="34sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
