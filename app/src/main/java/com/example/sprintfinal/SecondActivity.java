@@ -56,11 +56,12 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-
+         //Creacion del llamado con metodo intent explicito
         binding.buttonMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String message = binding.editTextMensaje.getText().toString();
+                String[]correos={"gingercea@gmail.com"};
                 // crear metodo de envio de correo
 
                 composeEmail("gingercea@gmail.com","Contacto al mail",message);

@@ -13,7 +13,7 @@
         android:layout_width="174dp"
         android:layout_height="62dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         android:text="Linkedin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,25 +22,25 @@
 
     <Button
         android:id="@+id/buttonWhatsApp"
-        android:layout_width="161dp"
-        android:layout_height="49dp"
+        android:layout_width="167dp"
+        android:layout_height="59dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Enviar mensaje"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/buttonLinkedin" />
 
     <Button
         android:id="@+id/buttonMail"
-        android:layout_width="156dp"
-        android:layout_height="51dp"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="Enviar Correo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/buttonWhatsApp" />
 
@@ -63,7 +63,7 @@
         android:layout_width="90dp"
         android:layout_height="80dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toStartOf="@+id/buttonLinkedin"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.39" />
+        app:layout_constraintGuide_begin="307dp" />
 
     <Button
         android:id="@+id/button"
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <EditText
         android:id="@+id/editTextMensaje"
@@ -121,8 +121,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="244dp"
         android:ems="10"
+        android:hint="Ingresar consulta"
         android:inputType="text"
-        android:text="ingrese su consulta"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
