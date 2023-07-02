@@ -129,4 +129,10 @@
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="buttonMail,buttonWhatsApp,buttonLinkedin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
